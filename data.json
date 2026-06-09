@@ -1,0 +1,403 @@
+{
+  "_note": "Bands paired as [0] vs [1], [2] vs [3], … [62] vs [63]. Images go in images/ folder. results[r][m] = winning band id for round r, match m.",
+  "title": "Battle of the Bands",
+  "bands": [
+    {
+      "id": 0,
+      "name": "Arctic Monkeys",
+      "image": "images/arctic-monkeys.webp"
+    },
+    {
+      "id": 1,
+      "name": "Bloc Party",
+      "image": "images/bloc-party.webp "
+    },
+    {
+      "id": 2,
+      "name": "Nirvana",
+      "image": "images/nirvana.webp"
+    },
+    {
+      "id": 3,
+      "name": "Franz Ferdinand",
+      "image": "images/franz-ferdinand.webp"
+    },
+    {
+      "id": 4,
+      "name": "Led Zeppelin",
+      "image": "images/led-zeppelin.webp"
+    },
+    {
+      "id": 5,
+      "name": "The Hives",
+      "image": "images/the-hives.webp"
+    },
+    {
+      "id": 6,
+      "name": "The White Stripes",
+      "image": "images/the-white-stripes.webp"
+    },
+    {
+      "id": 7,
+      "name": "The Smile",
+      "image": "images/the-smile.webp"
+    },
+    {
+      "id": 8,
+      "name": "Blur",
+      "image": "images/blur.webp"
+    },
+    {
+      "id": 9,
+      "name": "The Wombats",
+      "image": "images/the-wombats.webp"
+    },
+    {
+      "id": 10,
+      "name": "Chicharrica",
+      "image": "images/chicharrica.webp"
+    },
+    {
+      "id": 11,
+      "name": "Radiohead",
+      "image": "images/radiohead.webp"
+    },
+    {
+      "id": 12,
+      "name": "Florence + The Machine",
+      "image": "images/florence-the-machine.webp"
+    },
+    {
+      "id": 13,
+      "name": "Muse",
+      "image": "images/muse.webp"
+    },
+    {
+      "id": 14,
+      "name": "The Cure",
+      "image": "images/the-cure.webp"
+    },
+    {
+      "id": 15,
+      "name": "The Beatles",
+      "image": "images/the-beatles.webp"
+    },
+    {
+      "id": 16,
+      "name": "Pulp",
+      "image": "images/pulp.webp"
+    },
+    {
+      "id": 17,
+      "name": "The Strokes",
+      "image": "images/the-strokes.webp"
+    },
+    {
+      "id": 18,
+      "name": "Arcade Fire",
+      "image": "images/arcade-fire.webp"
+    },
+    {
+      "id": 19,
+      "name": "The Vaccines",
+      "image": "images/the-vaccines.webp"
+    },
+    {
+      "id": 20,
+      "name": "The Rolling Stones",
+      "image": "images/the-rolling-stones.webp"
+    },
+    {
+      "id": 21,
+      "name": "Ocean Colour Scene",
+      "image": "images/ocean-colour-scene.webp"
+    },
+    {
+      "id": 22,
+      "name": "Kasabian",
+      "image": "images/kasabian.webp"
+    },
+    {
+      "id": 23,
+      "name": "David Bowie",
+      "image": "images/david-bowie.webp"
+    },
+    {
+      "id": 24,
+      "name": "Coldplay",
+      "image": "images/coldplay.webp"
+    },
+    {
+      "id": 25,
+      "name": "Grizzly Bear",
+      "image": "images/grizzly-bear.webp"
+    },
+    {
+      "id": 26,
+      "name": "The Verve",
+      "image": "images/the-verve.webp"
+    },
+    {
+      "id": 27,
+      "name": "Rufus T. Firefly",
+      "image": "images/rufus-t-firefly.webp"
+    },
+    {
+      "id": 28,
+      "name": "Jet",
+      "image": "images/jet.webp"
+    },
+    {
+      "id": 29,
+      "name": "The Stone Roses",
+      "image": "images/the-stone-roses.webp"
+    },
+    {
+      "id": 30,
+      "name": "Vampire Weekend",
+      "image": "images/vampire-weekend.webp"
+    },
+    {
+      "id": 31,
+      "name": "Joy Division + New Order",
+      "image": "images/joy-division-new-order.webp"
+    },
+    {
+      "id": 32,
+      "name": "Kings of Leon",
+      "image": "images/kings-of-leon.webp"
+    },
+    {
+      "id": 33,
+      "name": "Platero y Tú",
+      "image": "images/platero-y-tu.webp"
+    },
+    {
+      "id": 34,
+      "name": "The Doors",
+      "image": "images/the-doors.webp"
+    },
+    {
+      "id": 35,
+      "name": "Portishead",
+      "image": "images/portishead.webp"
+    },
+    {
+      "id": 36,
+      "name": "Queen",
+      "image": "images/queen.webp"
+    },
+    {
+      "id": 37,
+      "name": "The Killers",
+      "image": "images/the-killers.webp"
+    },
+    {
+      "id": 38,
+      "name": "The Voidz",
+      "image": "images/the-voidz.webp"
+    },
+    {
+      "id": 39,
+      "name": "Supersubmarina",
+      "image": "images/supersubmarina.webp"
+    },
+    {
+      "id": 40,
+      "name": "The Smiths",
+      "image": "images/the-smiths.webp"
+    },
+    {
+      "id": 41,
+      "name": "Stereophonics",
+      "image": "images/stereophonics.webp"
+    },
+    {
+      "id": 42,
+      "name": "UNKLE",
+      "image": "images/unkle.webp"
+    },
+    {
+      "id": 43,
+      "name": "Mando Diao",
+      "image": "images/mando-diao.webp"
+    },
+    {
+      "id": 44,
+      "name": "Massive Attack",
+      "image": "images/massive-attack.webp"
+    },
+    {
+      "id": 45,
+      "name": "Depeche Mode",
+      "image": "images/depeche-mode.webp"
+    },
+    {
+      "id": 46,
+      "name": "Placebo",
+      "image": "images/placebo.webp"
+    },
+    {
+      "id": 47,
+      "name": "Doves",
+      "image": "images/doves.webp"
+    },
+    {
+      "id": 48,
+      "name": "Death Cab for Cutie",
+      "image": "images/death-cab-for-cutie.webp"
+    },
+    {
+      "id": 49,
+      "name": "Pink Floyd",
+      "image": "images/pink-floyd.webp"
+    },
+    {
+      "id": 50,
+      "name": "Extremoduro",
+      "image": "images/extremoduro.webp"
+    },
+    {
+      "id": 51,
+      "name": "Suede",
+      "image": "images/suede.webp"
+    },
+    {
+      "id": 52,
+      "name": "Tame Impala",
+      "image": "images/tame-impala.webp"
+    },
+    {
+      "id": 53,
+      "name": "Interpol",
+      "image": "images/interpol.webp"
+    },
+    {
+      "id": 54,
+      "name": "Red Hot Chili Peppers",
+      "image": "images/red-hot-chili-peppers.webp"
+    },
+    {
+      "id": 55,
+      "name": "Kaiser Chiefs",
+      "image": "images/kaiser-chiefs.webp"
+    },
+    {
+      "id": 56,
+      "name": "Belle and Sebastian",
+      "image": "images/belle-and-sebastian.webp"
+    },
+    {
+      "id": 57,
+      "name": "Oasis",
+      "image": "images/oasis.webp"
+    },
+    {
+      "id": 58,
+      "name": "Smashing Pumpkins",
+      "image": "images/smashing-pumpkins.webp"
+    },
+    {
+      "id": 59,
+      "name": "The Kooks",
+      "image": "images/the-kooks.webp"
+    },
+    {
+      "id": 60,
+      "name": "U2",
+      "image": "images/u2.webp"
+    },
+    {
+      "id": 61,
+      "name": "Talk Talk",
+      "image": "images/talk-talk.webp"
+    },
+    {
+      "id": 62,
+      "name": "Gorillaz",
+      "image": "images/gorillaz.webp"
+    },
+    {
+      "id": 63,
+      "name": "The Police",
+      "image": "images/the-police.webp"
+    }
+  ],
+  "results": [
+    [
+      null,
+      null,
+      null,
+      null,
+      null,
+      null,
+      null,
+      null,
+      null,
+      null,
+      null,
+      null,
+      null,
+      null,
+      null,
+      null,
+      null,
+      null,
+      null,
+      null,
+      null,
+      null,
+      null,
+      null,
+      null,
+      null,
+      null,
+      null,
+      null,
+      null,
+      null,
+      null
+    ],
+    [
+      null,
+      null,
+      null,
+      null,
+      null,
+      null,
+      null,
+      null,
+      null,
+      null,
+      null,
+      null,
+      null,
+      null,
+      null,
+      null
+    ],
+    [
+      null,
+      null,
+      null,
+      null,
+      null,
+      null,
+      null,
+      null
+    ],
+    [
+      null,
+      null,
+      null,
+      null
+    ],
+    [
+      null,
+      null
+    ],
+    [
+      null
+    ]
+  ]
+}

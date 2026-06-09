@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Battle of the Bands</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Outfit:wght@400;500;600&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+
+  <header class="site-header">
+    <p class="header-eyebrow">&#9834; Official Tournament</p>
+    <h1 id="tournament-title">Battle of the Bands</h1>
+    <p class="header-sub">64 Bands &middot; 6 Rounds &middot; 1 Champion</p>
+    <button id="rules-btn" class="rules-btn">Tournament Rules</button>
+  </header>
+
+  <nav class="rounds" id="round-tabs" role="tablist" aria-label="Tournament rounds"></nav>
+
+  <main id="bracket-view"></main>
+
+  <footer class="site-footer">
+    <button id="reset-btn" class="admin-btn">Reset</button>
+    <!-- Export button is only visible in admin mode (?admin) -->
+    <div class="export-only">
+      <button id="export-btn" class="admin-btn">Export Results</button>
+    </div>
+  </footer>
+
+  <!-- Rules Modal -->
+  <div id="rules-modal" class="modal hidden" role="dialog" aria-modal="true" aria-labelledby="rules-modal-title">
+    <div class="modal-backdrop"></div>
+    <div class="modal-box">
+      <h3 class="modal-title" id="rules-modal-title">Tournament Rules</h3>
+      <div class="rules-body">
+        <!-- Add your tournament rules here -->
+        <p>Rules will be announced before the tournament begins.</p>
+      </div>
+      <div class="modal-actions">
+        <button id="close-rules-btn" class="btn-primary">Close</button>
+      </div>
+    </div>
+  </div>
+
+  <!-- Export Modal -->
+  <div id="export-modal" class="modal hidden" role="dialog" aria-modal="true" aria-labelledby="export-modal-title">
+    <div class="modal-backdrop"></div>
+    <div class="modal-box">
+      <h3 class="modal-title" id="export-modal-title">Export Tournament Results</h3>
+      <p class="modal-desc">Copy this JSON, replace <code>data.json</code> in your repo, and commit to publish updates.</p>
+      <textarea id="export-ta" readonly spellcheck="false" aria-label="Exported JSON state"></textarea>
+      <div class="modal-actions">
+        <button id="copy-btn" class="btn-primary">Copy to Clipboard</button>
+        <button id="close-modal" class="btn-secondary">Close</button>
+      </div>
+    </div>
+  </div>
+
+  <script src="script.js" defer></script>
+</body>
+</html>
