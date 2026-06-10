@@ -15,7 +15,7 @@
     <p class="header-eyebrow">&#9834; Official Tournament</p>
     <h1 id="tournament-title">Battle of the Bands</h1>
     <p class="header-sub">64 Bands &middot; 6 Rounds &middot; 1 Champion</p>
-    <button id="rules-btn" class="rules-btn">Tournament Rules</button>
+    <button id="rules-btn" class="rules-btn">Reglas del Torneo</button>
   </header>
 
   <nav class="rounds" id="round-tabs" role="tablist" aria-label="Tournament rounds"></nav>
@@ -23,10 +23,10 @@
   <main id="bracket-view"></main>
 
   <footer class="site-footer">
-    <button id="reset-btn" class="admin-btn">Reset</button>
+    <button id="reset-btn" class="admin-btn">Restablecer</button>
     <!-- Export button is only visible in admin mode (?admin) -->
     <div class="export-only">
-      <button id="export-btn" class="admin-btn">Export Results</button>
+      <button id="export-btn" class="admin-btn">Exportar Resultados</button>
     </div>
   </footer>
 
@@ -34,13 +34,40 @@
   <div id="rules-modal" class="modal hidden" role="dialog" aria-modal="true" aria-labelledby="rules-modal-title">
     <div class="modal-backdrop"></div>
     <div class="modal-box">
-      <h3 class="modal-title" id="rules-modal-title">Tournament Rules</h3>
+      <h3 class="modal-title" id="rules-modal-title">Reglas del Torneo</h3>
       <div class="rules-body">
-        <!-- Add your tournament rules here -->
-        <p>Rules will be announced before the tournament begins.</p>
+        <h4>1. Criterio de Votación</h4>
+        <p>Cada enfrentamiento debe valorarse de forma global teniendo en cuenta factores como:</p>
+        <ul>
+          <li>Calidad de la discografía completa</li>
+          <li>Trayectoria y consistencia</li>
+          <li>Talento musical y compositivo</li>
+          <li>Capacidad de innovación o reinvención</li>
+          <li>Calidad de los directos</li>
+          <li>Legado artístico</li>
+        </ul>
+        <p><strong>Vota por el grupo que consideres superior en conjunto.</strong></p>
+
+        <h4>2. Sistema de Votación</h4>
+        <ul>
+          <li>Los votos son privados.</li>
+          <li>Solo se permite votar a uno de los grupos.</li>
+          <li>Existe la opción de voto en blanco si no tienes una preferencia clara.</li>
+        </ul>
+
+        <h4>3. Empates</h4>
+        <p>Si se produce un empate y existen votos en blanco, quienes hayan votado en blanco deberán emitir un voto definitivo para decidir el ganador.</p>
+
+        <h4>4. Derecho de Impugnación</h4>
+        <p>Si no estás de acuerdo con un resultado, puedes impugnarlo. Para ello deberás presentar argumentos razonados. Si la mayoría considera que dichos argumentos son convincentes, se repetirá la votación. En caso contrario, el resultado obtenido se mantendrá.</p>
+
+        <h4>5. Y Recuerda</h4>
+        <p><strong>Esto es la guerra.</strong></p>
+        <p>Habrá caídos en combate. Habrá eliminaciones dolorosas. Habrá resultados difíciles de aceptar. Sin embargo, para que exista un campeón, debe haber sacrificios.</p>
+        <p><strong>Aceptad el sufrimiento. Solo puede quedar uno.</strong></p>
       </div>
       <div class="modal-actions">
-        <button id="close-rules-btn" class="btn-primary">Close</button>
+        <button id="close-rules-btn" class="btn-primary">Cerrar</button>
       </div>
     </div>
   </div>
@@ -49,12 +76,12 @@
   <div id="export-modal" class="modal hidden" role="dialog" aria-modal="true" aria-labelledby="export-modal-title">
     <div class="modal-backdrop"></div>
     <div class="modal-box">
-      <h3 class="modal-title" id="export-modal-title">Export Tournament Results</h3>
-      <p class="modal-desc">Copy this JSON, replace <code>data.json</code> in your repo, and commit to publish updates.</p>
+      <h3 class="modal-title" id="export-modal-title">Exportar Resultados del Torneo</h3>
+      <p class="modal-desc">Copia este JSON y reemplaza el archivo <code>data.json</code> de tu repositorio para publicar actualizaciones.</p>
       <textarea id="export-ta" readonly spellcheck="false" aria-label="Exported JSON state"></textarea>
       <div class="modal-actions">
-        <button id="copy-btn" class="btn-primary">Copy to Clipboard</button>
-        <button id="close-modal" class="btn-secondary">Close</button>
+        <button id="copy-btn" class="btn-primary">Copiar al Portapapeles</button>
+        <button id="close-modal" class="btn-secondary">Cerrar</button>
       </div>
     </div>
   </div>

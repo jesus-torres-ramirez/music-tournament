@@ -236,16 +236,17 @@ body {
   display: flex;
   align-items: center;
   justify-content: center;
-  border-top: 1px solid var(--border);
-  border-bottom: 1px solid var(--border);
-  background: rgba(255,255,255,.015);
-  padding: 2px 0;
+  border-top: 1px solid var(--border-hi);
+  border-bottom: 1px solid var(--border-hi);
+  background: rgba(255,255,255,.025);
+  padding: 3px 0;
 }
 .vs-bar span {
   font-family: var(--font-display);
-  font-size: 9px;
+  font-size: 10px;
   letter-spacing: 3px;
-  color: var(--text-muted);
+  color: var(--text-dim);
+  font-weight: 500;
 }
 
 /* ── Champion View ─────────────────────────────────────────── */
@@ -330,8 +331,29 @@ body {
   flex: 1;
   overflow-y: auto;
   font-size: 14px;
-  color: var(--text-muted);
+  color: var(--text-dim);
   line-height: 1.75;
+}
+.rules-body h4 {
+  font-family: var(--font-display);
+  font-size: 1rem;
+  letter-spacing: 1px;
+  color: var(--gold);
+  margin: 18px 0 8px;
+  margin-top: 14px;
+}
+.rules-body h4:first-child { margin-top: 0; }
+.rules-body p {
+  margin-bottom: 12px;
+}
+.rules-body ul {
+  list-style: disc;
+  margin-left: 20px;
+  margin-bottom: 12px;
+}
+.rules-body li {
+  margin-bottom: 6px;
+  color: var(--text-dim);
 }
 
 /* ── Footer ────────────────────────────────────────────────── */

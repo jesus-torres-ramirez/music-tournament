@@ -153,7 +153,7 @@ function renderChampion() {
     main.innerHTML = `<div class="champ-view">
       <div class="champ-empty">
         <span class="trophy-icon">&#127942;</span>
-        <p>The champion hasn't been crowned yet.</p>
+        <p>El campeón aún no ha sido coronado.</p>
       </div>
     </div>`;
     return;
@@ -217,7 +217,7 @@ document.getElementById('close-rules-btn').addEventListener('click', () =>
 document.getElementById('export-btn').addEventListener('click', openExport);
 
 document.getElementById('reset-btn').addEventListener('click', () => {
-  if (confirm('Revert all changes to the last saved state?')) {
+  if (confirm('¿Deshacer todos los cambios al último estado guardado?')) {
     localStorage.removeItem(LS_KEY);
     location.reload();
   }
@@ -227,13 +227,13 @@ document.getElementById('copy-btn').addEventListener('click', () => {
   const ta  = document.getElementById('export-ta');
   const btn = document.getElementById('copy-btn');
   navigator.clipboard.writeText(ta.value).then(() => {
-    btn.textContent = '✓ Copied!';
-    setTimeout(() => { btn.textContent = 'Copy to Clipboard'; }, 2200);
+    btn.textContent = '✓ ¡Copiado!';
+    setTimeout(() => { btn.textContent = 'Copiar al Portapapeles'; }, 2200);
   }).catch(() => {
     ta.select();
     document.execCommand('copy'); // fallback for older browsers
-    btn.textContent = '✓ Copied!';
-    setTimeout(() => { btn.textContent = 'Copy to Clipboard'; }, 2200);
+    btn.textContent = '✓ ¡Copiado!';
+    setTimeout(() => { btn.textContent = 'Copiar al Portapapeles'; }, 2200);
   });
 });
 
