@@ -11,6 +11,7 @@ if (IS_ADMIN) document.body.classList.add('admin-mode');
 /* ── State ─────────────────────────────────────────────────── */
 let data = null;          // loaded from data.json
 let state = null;         // results array; persisted to localStorage
+let lockedMatches = null; // _lockedMatches from data.json; locks specific match results
 let currentRound = 0;
 
 /* ── Data helpers ──────────────────────────────────────────── */
@@ -39,6 +40,10 @@ function loadState() {
 }
 
 const saveState = () => localStorage.setItem(LS_KEY, JSON.stringify(state));
+
+// Check if a match result is locked (cannot be edited)
+const isMatchLocked = (round, matchIdx) => 
+  lockedMatches?.[round]?.[matchIdx] === true ?? false;
 
 function clearDownstream(round, matchIdx) {
   let r = round + 1, m = Math.floor(matchIdx / 2);
@@ -76,7 +81,8 @@ function slotHTML(band, won, lost, round, matchIdx) {
   const id      = band?.id ?? null;
   const name    = band?.name || 'TBD';
   const isTBD   = !band || !band.name;
-  const canClick = !isTBD && id !== null;
+  const locked  = isMatchLocked(round, matchIdx);
+  const canClick = !isTBD && id !== null && !locked;
 
   const cls = ['band-slot', won && 'winner', lost && 'loser', isTBD && 'tbd', canClick && 'clickable']
     .filter(Boolean).join(' ');
@@ -176,6 +182,8 @@ function renderChampion() {
 /* ── Export ────────────────────────────────────────────────── */
 function openExport() {
   const out = { ...data, results: state };
+  // Create _lockedMatches: mirror structure of results with true where a match has a result
+  out._lockedMatches = state.map(round => round.map(result => result !== null));
   document.getElementById('export-ta').value = JSON.stringify(out, null, 2);
   document.getElementById('export-modal').classList.remove('hidden');
 }
@@ -199,6 +207,11 @@ async function init() {
 
   document.title = data.title || 'Tournament Bracket';
   document.getElementById('tournament-title').textContent = data.title || 'Battle of the Bands';
+
+  // Load locked matches from data if available
+  if (data._lockedMatches) {
+    lockedMatches = data._lockedMatches;
+  }
 
   loadState();
   renderTabs();
