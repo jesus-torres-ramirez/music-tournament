@@ -215,7 +215,7 @@ async function init() {
 
   loadState();
   renderTabs();
-  renderRound(0);
+  renderRound(currentRound);
 }
 
 /* ── Event listeners (DOM is ready because script is deferred) */
