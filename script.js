@@ -211,6 +211,8 @@ async function init() {
   // Load locked matches from data if available
   if (data._lockedMatches) {
     lockedMatches = data._lockedMatches;
+    // If JSON has published locked matches, reset localStorage to use the fresh data
+    localStorage.removeItem(LS_KEY);
   }
 
   loadState();
