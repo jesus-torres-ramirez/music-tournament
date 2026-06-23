@@ -31,11 +31,7 @@ const isRoundDone = r => state[r]?.every(v => v !== null) ?? false;
 
 /* ── Persistence ───────────────────────────────────────────── */
 function loadState() {
-  const raw = localStorage.getItem(LS_KEY);
-  if (raw) {
-    try { state = JSON.parse(raw); return; } catch (_) { /* fall through */ }
-  }
-  // Deep-copy results from data.json as initial state
+  // Always start fresh from data.json on page load
   state = JSON.parse(JSON.stringify(data.results));
 }
 
@@ -211,8 +207,6 @@ async function init() {
   // Load locked matches from data if available
   if (data._lockedMatches) {
     lockedMatches = data._lockedMatches;
-    // If JSON has published locked matches, reset localStorage to use the fresh data
-    localStorage.removeItem(LS_KEY);
   }
 
   loadState();
