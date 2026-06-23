@@ -12,7 +12,7 @@ if (IS_ADMIN) document.body.classList.add('admin-mode');
 let data = null;          // loaded from data.json
 let state = null;         // results array; persisted to localStorage
 let lockedMatches = null; // _lockedMatches from data.json; locks specific match results
-let currentRound = 3;
+let currentRound = 4;
 
 /* ── Data helpers ──────────────────────────────────────────── */
 const getBand = id => (id !== null && id !== undefined) ? (data.bands[id] ?? null) : null;
