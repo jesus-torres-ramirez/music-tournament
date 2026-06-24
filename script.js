@@ -181,7 +181,7 @@ function renderChampion() {
       <div class="champ-card-label">MULTIVERSE CHAMPION</div>
       ${altImgEl}
       <div class="champ-name">${alternative?.name || 'TBD'}</div>
-      <span class="champ-trophy">🩻</span>
+      <span class="champ-trophy">💀</span>
     </div>
   </div>`;
 }
@@ -222,7 +222,7 @@ async function init() {
 
   loadState();
   renderTabs();
-  renderRound(currentRound);
+  currentRound === 6 ? renderChampion() : renderRound(currentRound);
 }
 
 /* ── Event listeners (DOM is ready because script is deferred) */
