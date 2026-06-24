@@ -12,7 +12,7 @@ if (IS_ADMIN) document.body.classList.add('admin-mode');
 let data = null;          // loaded from data.json
 let state = null;         // results array; persisted to localStorage
 let lockedMatches = null; // _lockedMatches from data.json; locks specific match results
-let currentRound = 4;
+let currentRound = 6;
 
 /* ── Data helpers ──────────────────────────────────────────── */
 const getBand = id => (id !== null && id !== undefined) ? (data.bands[id] ?? null) : null;
@@ -150,6 +150,7 @@ function renderRound(roundIdx) {
 function renderChampion() {
   const main   = document.getElementById('bracket-view');
   const winner = getBand(state[5][0]);
+  const alternative = getBand(50); // Extremoduro as alternative
 
   if (!winner || !winner.name) {
     main.innerHTML = `<div class="champ-view">
@@ -165,12 +166,22 @@ function renderChampion() {
     ? `<img src="${winner.image}" alt="${winner.name}" class="champ-img">`
     : `<div class="champ-img-ph" aria-hidden="true"></div>`;
 
+  const altImgEl = alternative?.image
+    ? `<img src="${alternative.image}" alt="${alternative.name}" class="champ-img">`
+    : `<div class="champ-img-ph" aria-hidden="true"></div>`;
+
   main.innerHTML = `<div class="champ-view">
     <div class="champ-card">
       <div class="champ-card-label">CHAMPION</div>
       ${imgEl}
       <div class="champ-name">${winner.name}</div>
       <span class="champ-trophy">&#127942;</span>
+    </div>
+    <div class="champ-card alt">
+      <div class="champ-card-label">MULTIVERSE CHAMPION</div>
+      ${altImgEl}
+      <div class="champ-name">${alternative?.name || 'TBD'}</div>
+      <span class="champ-trophy">🩻</span>
     </div>
   </div>`;
 }
